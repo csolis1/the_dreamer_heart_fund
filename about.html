@@ -9,9 +9,9 @@
                  img-src 'self' data: https:;
                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                  font-src 'self' https://fonts.gstatic.com;
-                 script-src 'self';
-                 connect-src 'self';
-                 frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com;
+                 script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' https://www.paypal.com https://www.paypalobjects.com;
+                 connect-src 'self' https://www.paypal.com https://api-m.paypal.com;
+                 frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com https://www.paypal.com;
                  object-src 'none';
                  base-uri 'self';
                  form-action 'self';
@@ -27,7 +27,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.dreamerheartfund.org/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Dreamer Heart Fund" />
   <meta property="og:title" content="The Dreamer Heart Fund | A nonprofit built to protect hope" />
@@ -36,16 +35,15 @@
   <meta property="og:url" content="https://www.dreamerheartfund.org/" />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Dreamer Heart Fund" />
   <meta name="twitter:description" content="A nonprofit built to protect hope — direct aid, education access, and community healing." />
   <meta name="twitter:image" content="https://www.dreamerheartfund.org/images/dreamer-heart-fund.jpg" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/images/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -70,7 +68,7 @@
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="brand" href="/">
-      <img class="brand__mark" src="images/logo.png" alt="The Dreamer Heart Fund logo">
+        <img class="brand__mark" src="images/logo.png" alt="The Dreamer Heart Fund logo">
         <span class="brand__name">The Dreamer Heart Fund</span>
       </a>
 
@@ -79,9 +77,6 @@
           <li><a href="#mission">Mission</a></li>
           <li><a href="#programs">Programs</a></li>
           <li><a href="#events">Events</a></li>
-          <!-- <li><a href="#shop">Shop</a></li> -->
-          <!-- <li><a href="#auctions">Auctions</a></li> -->
-          <!-- <li><a href="#video">Stories</a></li> -->
           <li><a href="#donate" class="primary-nav__cta">Donate</a></li>
         </ul>
       </nav>
@@ -104,20 +99,15 @@
   <main id="main-content">
 
     <section class="hero" id="hero" data-reveal-group>
-      <div class="hero__media" style="background-image:url('/images/dreamer-heart-fund.jpg');" role="img" aria-label="The Dreamer Heart Fund"></div>
+      <div class="hero__media" role="img" aria-label="The Dreamer Heart Fund"></div>
       <div class="hero__scrim"></div>
-
       <div class="hero__content">
         <div class="hero__inner">
           <p class="eyebrow eyebrow--gold" data-reveal>The Dreamer Heart Fund</p>
-
-          <h1 class="hero__title" data-reveal>A nonprofit built to protect hope.</h1>
-
+          <h1 class="hero__title" data-reveal> The Dreamer : <br> Carlos Solis</h1>
           <p class="hero__lede" data-reveal>
-            We support families, young dreamers, and community partners through direct aid,
-            education access, and long-term programs designed to create real stability.
+            How the story of one artist's impact turned into something more
           </p>
-
           <div class="hero__actions" data-reveal>
             <a href="#mission" class="btn btn--gold">Learn More</a>
             <a href="#donate" class="btn btn--blue-outline">Support the Fund</a>
@@ -126,92 +116,35 @@
       </div>
     </section>
 
-    <section class="stats" aria-label="Our impact so far">
-      <div class="stats__inner">
-        <div class="stat" data-reveal>
-          <div class="stat__value">120+</div>
-          <div class="stat__label stat__label--gold">Families supported</div>
-        </div>
-        <div class="stat" data-reveal>
-          <div class="stat__value">$250K</div>
-          <div class="stat__label stat__label--blue">Community impact</div>
-        </div>
-        <div class="stat" data-reveal>
-          <div class="stat__value">18</div>
-          <div class="stat__label stat__label--gold">Partner organizations</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="programs" id="programs">
-      <div class="section-inner">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow eyebrow--gold">Programs</p>
-          <h2 class="section-title">Focused support with a clear purpose.</h2>
-        </div>
-
-        <div class="programs__grid">
-          <article class="card" data-reveal>
-            <div class="card__index card__index--gold">01</div>
-            <h3 class="card__title">Dreamer Grants</h3>
-            <p class="card__text">Small, responsive grants for urgent essentials and short-term recovery needs.</p>
-          </article>
-          <article class="card" data-reveal>
-            <div class="card__index card__index--blue">02</div>
-            <h3 class="card__title">Workshops</h3>
-            <p class="card__text">Art workshops and mentorship support for youth and early-career dreamers with Carlos Solis.</p>
-          </article>
-          <article class="card" data-reveal>
-            <div class="card__index card__index--gold">03</div>
-            <h3 class="card__title">Partner Circle</h3>
-            <p class="card__text">Collaborations with local groups that already know the communities they serve.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="mission" id="mission">
       <div class="section-inner mission__grid">
         <div data-reveal>
-          <p class="eyebrow eyebrow--blue">Mission</p>
-          <h2 class="section-title section-title--tight">Born from one heart, built for many dreamers.</h2>
+          <p class="eyebrow eyebrow--blue">The Orgins</p>
+          <h2 class="section-title section-title--tight">Born from one Dreamer, built for many.</h2>
           <p class="body-text">
-            <strong>The Dreamer Heart Fund</strong> began as a personal initiative to support artist Carlos Solis
-            during his heart surgery, inspired by his artistic series <em>“The Dreamer.”</em> Today, it is a
-            nonprofit effort to help artists and families in crisis feel less alone and more seen —
-            turning art into anchor, and creativity into care.
-          </p>
+            <strong>The Dreamer Heart Fund</strong> was founded to support artist Carlos Solis though his recover after his health crisis. Solis is a Venezuelan-born surrealist artist, designer, and curator whose life and work embody the intersection of imagination, culture, and resilience. The fund was inspired by his series <em>“The Dreamer”</em>, which reflects on the power of the imagination and the beauty of human existence.
+            <br>
+            <br>
+
+Born in 1966 in Maracaibo, Venezuela, Carlos showed an active imagination and developing creative ability from an early age. He began painting murals and portraits as a teenager, laying the foundation for a lifelong passion. In 1989, he moved to the United States, eventually settling in Atlanta, where he worked as a freelance artist and designer. By the mid-1990s, he had begun painting in a surrealist style, drawing on imagery from nature, fantasy, spiritual themes, and conceptual art.
+<br>
+<br>
+
+<em>“In the infinite world of my imagination, I try to convey and stimulate the mythical and spiritual elements of visual expression,” Carlos says. “My passion in painting started with the magnificent elements of nature—fauna and flora—and their natural beauty… For example: the majestic animals of the Amazon or Indians from Venezuela (Guajiros). However, I always try to expand my work to other areas of reality and with a spiritual meaning… to explore and show the ranges of styles and techniques by creating the most beautiful and delicate components of life to the most complex and strange art.” </em>
+
+<br>
+<br>
+
+Carlos’s work references the techniques of many old masters while continually finding fresh imagery within surrealism. His experiences across South and North America have deeply shaped his vision: “Fortunately, I have the pleasure and the opportunity to experience the richness of many cultures in South and North America, which allow me to expand my imagination even more… My work reflects the distinctness of my artistic perception from those experiences, which provides vivid colors and physical details in order to make something visually pleasing, grotesque or unfamiliar to look at.” His art also seeks to raise awareness about our delicate habitat and the lack of knowledge around cultural and racial diversity in South America.
+
+Beyond his studio practice, Carlos is a curator and community builder. He is the founder of the Latin American artist collective Contrapunto, and has curated significant exhibitions including Blackness in Latin America, which premiered in New York and traveled to Chicago, New Mexico, and Atlanta, and Surrealist Apparatus, which toured the East Coast of the United States. After studying Graphic Design at the College of DuPage in Illinois, he moved to Atlanta in 2006 and, a few years later, dedicated his life to his fine art career. The idea for a Latin American artist collective took shape in 2008, reflecting his long-standing commitment to supporting fellow artists.
+<br>
+<br>
+The Dreamer Heart Fund grows out of this same commitment: from one artist’s health crisis to a collective promise that the creative community will care for its own in moments of urgent need. 
         </div>
 
         <div class="mission__image" data-reveal>
-          <img src="/images/TheDreamer.jpg" alt="A painting from ‘The Dreamer’ series, the artwork that inspired the fund" loading="lazy" width="640" height="720" />
-        </div>
-      </div>
-    </section>
-
-    <section class="upcoming" id="events">
-      <div class="section-inner">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow eyebrow--blue">Upcoming</p>
-          <h2 class="section-title">Events &amp; Gatherings</h2>
-        </div>
-
-        <div class="upcoming__grid">
-          <article class="event-card" data-reveal>
-            <p class="event-card__date event-card__date--blue">June 14, 2026</p>
-            <h3 class="event-card__title">Fundraiser Gala</h3>
-            <p class="event-card__place">Community Arts Center</p>
-          </article>
-          <article class="event-card" data-reveal>
-            <p class="event-card__date event-card__date--gold">July 08, 2026</p>
-            <h3 class="event-card__title">Youth Art Showcase</h3>
-            <p class="event-card__place">Eastside Gallery</p>
-          </article>
-          <article class="event-card" data-reveal>
-            <p class="event-card__date event-card__date--blue">August 02, 2026</p>
-            <h3 class="event-card__title">Talk &amp; Screening</h3>
-            <p class="event-card__place">Downtown Cinema</p>
-          </article>
+          <img src="images/TheDreamer.jpg" alt="A painting from ‘The Dreamer’ series, the artwork that inspired the fund" loading="lazy" width="640" height="720" />
         </div>
       </div>
     </section>
@@ -220,7 +153,7 @@
       <div class="section-inner">
         <div class="section-head" data-reveal>
           <p class="eyebrow eyebrow--gold">Past Events</p>
-          <h2 class="section-title">Moments that began the journey.</h2>
+          <h2 class="section-title"> Carlos Solis' Journey</h2>
         </div>
 
         <div class="carousel">
@@ -231,7 +164,7 @@
           <ul class="carousel__track" id="carousel-track">
             <li class="carousel__item" data-reveal>
               <div class="carousel__media">
-                <img src="/images/fundraiser.png" alt="Guests at the Inaugural Dreamer Exhibition gallery opening" loading="lazy" width="600" height="400" />
+                <img src="images/fundraiser.png" alt="Guests at the Inaugural Dreamer Exhibition gallery opening" loading="lazy" width="600" height="400" />
                 <span class="carousel__tag carousel__tag--blue">Aug 2020</span>
               </div>
               <h3 class="carousel__title">Inaugural Dreamer Exhibition</h3>
@@ -239,7 +172,7 @@
             </li>
             <li class="carousel__item" data-reveal>
               <div class="carousel__media">
-                <img src="/images/past/healing-workshop.jpg" alt="Families and artists at the Community Healing Workshop" loading="lazy" width="600" height="400" />
+                <img src="images/past/healing-workshop.jpg" alt="Families and artists at the Community Healing Workshop" loading="lazy" width="600" height="400" />
                 <span class="carousel__tag carousel__tag--gold">Jan 2026</span>
               </div>
               <h3 class="carousel__title">Community Healing Workshop</h3>
@@ -247,7 +180,7 @@
             </li>
             <li class="carousel__item" data-reveal>
               <div class="carousel__media">
-                <img src="/images/past/benefit-concert.jpg" alt="Local musicians performing at the Benefit Concert for the Fund" loading="lazy" width="600" height="400" />
+                <img src="images/past/benefit-concert.jpg" alt="Local musicians performing at the Benefit Concert for the Fund" loading="lazy" width="600" height="400" />
                 <span class="carousel__tag carousel__tag--blue">Mar 2026</span>
               </div>
               <h3 class="carousel__title">Benefit Concert for the Fund</h3>
@@ -262,34 +195,9 @@
       </div>
     </section>
 
-    <!-- ============ FUTURE MODULE: VIDEO (scaffold, hidden until content ships) ============ -->
-    <section class="module-stub" id="video" hidden>
-      <!--
-        Reserved for a "Stories" / video module (e.g. embedded testimonials,
-        program recaps). Wire a privacy-respecting embed (youtube-nocookie.com
-        or self-hosted <video>) here; CSP frame-src already allows the two
-        common providers. Keep autoplay off and always provide captions.
-      -->
-    </section>
-
-    <!-- ============ FUTURE MODULE: SHOP (scaffold, hidden until content ships) ============ -->
-    <section class="module-stub" id="shop" hidden>
-      <!--
-        Reserved for a merchandise / cause-marketing shop. Render products
-        server-side or via a signed API call — never trust client-side price
-        data. Route checkout through a PCI-compliant processor (Stripe
-        Checkout, Shopify, etc.); this page never handles card numbers.
-      -->
-    </section>
-
-    <!-- ============ FUTURE MODULE: AUCTIONS (scaffold, hidden until content ships) ============ -->
-    <section class="module-stub" id="auctions" hidden>
-      <!--
-        Reserved for benefit auctions. Bidding must be validated server-side
-        (authoritative current-bid state, rate limiting, auth) — client JS
-        should only ever reflect state, not decide winners.
-      -->
-    </section>
+    <section class="module-stub" id="video" hidden></section>
+    <section class="module-stub" id="shop" hidden></section>
+    <section class="module-stub" id="auctions" hidden></section>
 
     <!-- ============ DONATE ============ -->
     <section class="donate" id="donate">
@@ -300,34 +208,40 @@
           <p class="body-text">
             Donations fund emergency grants, scholarships, and the community programs above.
             One-time and recurring gifts are both welcome.
+            <br>
           </p>
         </div>
 
         <div class="donate__panel" data-reveal>
-          <!--
-            Scaffold only: this form currently has no backend. Before launch,
-            replace the action below with a PCI-compliant hosted checkout
-            (Stripe Checkout / Payment Links, PayPal Giving, or similar) so
-            card data never touches this server. Do not add a server-side
-            handler that stores raw card numbers.
-          -->
-          <form class="donate-form" action="#" method="post" novalidate>
+          <div class="donate-form">
             <div class="donate-form__amounts" role="group" aria-label="Donation amount">
-              <button type="button" class="amount-btn" data-amount="25">$25</button>
-              <button type="button" class="amount-btn" data-amount="50">$50</button>
-              <button type="button" class="amount-btn" data-amount="100">$100</button>
-              <button type="button" class="amount-btn" data-amount="250">$250</button>
+              <button type="button" class="amount-btn" data-amount="25" aria-pressed="false">$25</button>
+              <button type="button" class="amount-btn" data-amount="50" aria-pressed="false">$50</button>
+              <button type="button" class="amount-btn" data-amount="100" aria-pressed="false">$100</button>
+              <button type="button" class="amount-btn" data-amount="250" aria-pressed="false">$250</button>
             </div>
 
             <label class="field-label" for="donate-amount">Custom amount (USD)</label>
-            <input class="field-input" id="donate-amount" name="amount" type="number" min="1" step="1" inputmode="numeric" autocomplete="off" placeholder="75" />
+            <input
+              class="field-input"
+              id="donate-amount"
+              name="amount"
+              type="text"
+              inputmode="decimal"
+              autocomplete="off"
+              placeholder="75"
+              aria-describedby="donate-form-note"
+            />
 
-            <label class="field-label" for="donate-email">Email</label>
-            <input class="field-input" id="donate-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            <div id="paypal-button-container" class="paypal-button-container"></div>
 
-            <button type="submit" class="btn btn--blue donate-form__submit">Donate securely</button>
-            <p class="donate-form__note">You’ll be redirected to a secure, PCI-compliant checkout. The Dreamer Heart Fund never stores your card details.</p>
-          </form>
+            <p class="donate-form__note" id="donate-form-note" aria-live="polite">Choose or enter an amount above to enable payment. You'll confirm the donation on PayPal — The Dreamer Heart Fund never stores your card details.</p>
+
+            <p class="donate-form__fallback">
+              Buttons not loading?
+              <a href="https://www.paypal.biz/thedreamerheartfund" rel="noopener">Donate on PayPal directly</a>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -351,11 +265,13 @@
 
       <div class="site-footer__legal">
         <p>&copy; <span id="footer-year">2026</span> The Dreamer Heart Fund. A registered nonprofit organization.</p>
-        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Use</a></p>
+        <p><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA8m6np1R4EyHcxObkY6hLGJdmeCMpY4fYKsWWD1G0BNYx0Xn50q8cy3hmt63-K00gHcWDGMQ-kjcnxLY&currency=USD&intent=capture" defer></script>
+  <script src="donate.js" defer></script>
 </body>
 </html>
