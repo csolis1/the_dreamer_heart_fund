@@ -1,9 +1,4 @@
-/* =========================================================
-   Dreamer Heart Fund — base styles
-   ========================================================= */
-
 :root {
-  /* Palette */
   --color-black: #0d0d0d;
   --color-ink: #111111;
   --color-white: #ffffff;
@@ -24,20 +19,15 @@
   --color-text-muted: #4a4a4a;
   --color-text-soft: #8a8277;
 
-  /* Type */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Layout */
   --max-width: 1180px;
   --gutter: 6vw;
 
   --header-height: 76px;
 }
 
-/* =========================================================
-   Reset
-   ========================================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -84,9 +74,6 @@ ul { list-style: none; }
 }
 .skip-link:focus { left: 12px; top: 12px; }
 
-/* =========================================================
-   Shared tokens (eyebrow, section head, buttons, cards)
-   ========================================================= */
 .eyebrow {
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -163,10 +150,6 @@ ul { list-style: none; }
   background: var(--color-blue);
   border-color: var(--color-blue);
 }
-
-/* =========================================================
-   Reveal-on-scroll (progressive enhancement; see js/main.ts)
-   ========================================================= */
 [data-reveal] {
   opacity: 0;
   transform: translateY(14px);
@@ -176,12 +159,8 @@ ul { list-style: none; }
   opacity: 1;
   transform: translateY(0);
 }
-/* If JS fails to load, content must still be visible */
 .no-js [data-reveal] { opacity: 1; transform: none; }
 
-/* =========================================================
-   Header / Nav
-   ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -285,9 +264,6 @@ ul { list-style: none; }
   .nav-toggle { display: flex; }
 }
 
-/* =========================================================
-   Hero
-   ========================================================= */
 .hero {
   position: relative;
   overflow: hidden;
@@ -351,10 +327,6 @@ ul { list-style: none; }
   flex-wrap: wrap;
   margin-top: 30px;
 }
-
-/* =========================================================
-   Stats
-   ========================================================= */
 .stats {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-border-2);
@@ -385,9 +357,6 @@ ul { list-style: none; }
 .stat__label--gold { color: var(--color-gold-dark); }
 .stat__label--blue { color: var(--color-blue-dark); }
 
-/* =========================================================
-   Programs
-   ========================================================= */
 .programs { background: var(--color-white); padding: 88px 0; }
 .programs__grid {
   display: grid;
@@ -423,9 +392,6 @@ ul { list-style: none; }
   color: var(--color-text-muted);
 }
 
-/* =========================================================
-   Mission
-   ========================================================= */
 .mission { background: var(--color-cream-2); padding: 88px 0; }
 .mission__grid {
   display: grid;
@@ -444,9 +410,6 @@ ul { list-style: none; }
   .mission__grid { grid-template-columns: 1fr; }
 }
 
-/* =========================================================
-   Upcoming events
-   ========================================================= */
 .upcoming { background: var(--color-white); padding: 88px 0; }
 .upcoming__grid {
   display: grid;
@@ -482,10 +445,6 @@ ul { list-style: none; }
   line-height: 1.7;
   color: var(--color-text-muted);
 }
-
-/* =========================================================
-   Past events carousel
-   ========================================================= */
 .past-events { background: var(--color-cream-3); padding: 88px 0 100px; }
 
 .carousel { position: relative; }
@@ -563,14 +522,9 @@ ul { list-style: none; }
 .carousel__nav--prev { left: 10px; }
 .carousel__nav--next { right: 10px; }
 
-/* =========================================================
-   Future module scaffolds
-   ========================================================= */
 .module-stub { padding: 88px 0; }
 
-/* =========================================================
-   Donate
-   ========================================================= */
+/* Donate Panel */
 .donate { background: var(--color-cream-2); padding: 88px 0 100px; }
 .donate__grid {
   display: grid;
@@ -639,9 +593,7 @@ ul { list-style: none; }
   color: var(--color-text-soft);
 }
 
-/* =========================================================
-   Footer
-   ========================================================= */
+/* Footer*/
 .site-footer { background: var(--color-black); color: rgba(255, 255, 255, 0.8); padding: 60px 0 30px; }
 .site-footer__grid {
   display: grid;
@@ -762,4 +714,259 @@ ul { list-style: none; }
       outline: 2px solid #309bcf;
       outline-offset: 3px;
       border-radius: 4px;
+    }
+
+
+
+
+   /* Programs */
+    :root {
+      --dhf-black: var(--color-black, #0d0d0d);
+      --dhf-black-soft: var(--color-black-soft, #161616);
+      --dhf-gold: var(--color-gold, #c9a24b);
+      --dhf-gold-soft: var(--color-gold-soft, #e4c98a);
+      --dhf-blue: var(--color-blue, #2f4a7a);
+      --dhf-cream: var(--color-cream, #f4f1ea);
+    }
+
+    .hero--programs .hero__media {
+      background-image: url("images/mercy.webp");
+      background-size: cover;
+      background-position: center 30%;
+    }
+
+    .programs-list {
+      background: var(--dhf-black);
+      padding: 6rem 0;
+    }
+
+    .program-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 2.5rem;
+      align-items: start;
+      border: 1px solid rgba(201, 162, 75, 0.25);
+      background: var(--dhf-black-soft);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .program-card__media {
+      position: relative;
+      height: 100%;
+      min-height: 320px;
+    }
+
+    .program-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .program-card__status {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--dhf-gold);
+      color: var(--dhf-black);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .program-card__body {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+    }
+
+    .program-card__title {
+      font-family: var(--font-display, "Cormorant Garamond", serif);
+      font-size: 2rem;
+      color: var(--dhf-cream);
+      margin: 0.25rem 0 1rem;
+    }
+
+    .program-card__facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem 1.5rem;
+      margin: 1.75rem 0;
+      padding: 1.25rem 0;
+      border-top: 1px solid rgba(201, 162, 75, 0.2);
+      border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+    }
+
+    .program-card__facts dt {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--dhf-gold-soft);
+      margin-bottom: 0.25rem;
+    }
+
+    .program-card__facts dd {
+      margin: 0;
+      color: var(--dhf-cream);
+      font-size: 0.95rem;
+    }
+
+    .program-card__details {
+      border-top: 1px solid rgba(244, 241, 234, 0.12);
+      padding: 0.9rem 0;
+    }
+
+    .program-card__details:last-of-type {
+      border-bottom: 1px solid rgba(244, 241, 234, 0.12);
+    }
+
+    .program-card__details summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--dhf-cream);
+      font-weight: 500;
+    }
+
+    .program-card__details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .program-card__details summary::after {
+      content: "+";
+      color: var(--dhf-gold);
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-left: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .program-card__details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .program-card__details p {
+      margin-top: 0.9rem;
+    }
+
+    .program-card__cta {
+      margin-top: 2rem;
+    }
+
+    .programs-list__more {
+      margin-top: 2.5rem;
+      color: rgba(244, 241, 234, 0.75);
+      font-size: 0.95rem;
+    }
+
+    .programs-list__more a {
+      color: var(--dhf-gold);
+    }
+
+    .signup {
+      background: var(--dhf-black-soft);
+      padding: 6rem 0;
+    }
+
+    .signup__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .signup__panel {
+      background: var(--dhf-black);
+      border: 1px solid rgba(201, 162, 75, 0.25);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+
+    .signup-form__field {
+      border: 0;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+
+    .session-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .session-btn {
+      border: 1px solid rgba(201, 162, 75, 0.4);
+      background: transparent;
+      color: var(--dhf-cream);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .session-btn:hover {
+      border-color: var(--dhf-gold);
+    }
+
+    .session-btn[aria-pressed="true"] {
+      background: var(--dhf-gold);
+      border-color: var(--dhf-gold);
+      color: var(--dhf-black);
+      font-weight: 600;
+    }
+
+    .field-input--textarea {
+      resize: vertical;
+      min-height: 4.5rem;
+    }
+
+    .signup-form__submit {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .signup-form__status {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--dhf-gold-soft);
+      min-height: 1.2em;
+    }
+
+    @media (max-width: 900px) {
+      .program-card {
+        grid-template-columns: 1fr;
+      }
+
+      .program-card__body {
+        padding: 2rem;
+      }
+
+      .program-card__media {
+        min-height: 240px;
+      }
+
+      .signup__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .program-card__details summary::after {
+        transition: none;
+      }
+    }
+    .programs-list .body-text,
+    .signup .body-text,
+    .program-card .body-text {
+      color: var(--dhf-cream, #f4f1ea);
+    }
+
+    .field-input {
+      color: var(--dhf-cream, #f4f1ea);
+      background: transparent;
     }
