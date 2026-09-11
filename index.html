@@ -9,8 +9,8 @@
                  img-src 'self' data: https:;
                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                  font-src 'self' https://fonts.gstatic.com;
-                 script-src 'self';
-                 connect-src 'self';
+                 script-src 'self' https://www.paypal.com https://www.paypalobjects.com;
+                 connect-src 'self' https://www.paypal.com https://api-m.paypal.com;
                  frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com;
                  object-src 'none';
                  base-uri 'self';
@@ -21,13 +21,13 @@
   <meta name="theme-color" content="#0d0d0d" />
 
   <title>The Dreamer Heart Fund | Direct Aid, Education & Community Healing</title>
-  <meta name="description" content="The Dreamer Heart Fund is a nonprofit supporting families and young dreamers through emergency aid, education access, and community healing programs." />
+  <meta name="description" content="The Dreamer Heart Fund is a nonprofit supporting creatives and young dreamers through emergency aid, education access, and community healing programs." />
   <meta name="keywords" content="Dreamer Heart Fund, nonprofit, charity, emergency grants, education access, community healing, donate" />
   <meta name="author" content="The Dreamer Heart Fund" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.dreamerheartfund.org/" />
 
-  <!-- Open Graph -->
+
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Dreamer Heart Fund" />
   <meta property="og:title" content="The Dreamer Heart Fund | A nonprofit built to protect hope" />
@@ -36,7 +36,6 @@
   <meta property="og:url" content="https://www.dreamerheartfund.org/" />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Dreamer Heart Fund" />
   <meta name="twitter:description" content="A nonprofit built to protect hope — direct aid, education access, and community healing." />
@@ -76,8 +75,8 @@
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="primary-nav__list">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="about.html">Programs</a></li>
           <li><a href="#events">Events</a></li>
           <!-- <li><a href="#auctions">Auctions</a></li> -->
           <!-- <li><a href="#video">Stories</a></li> -->
@@ -93,8 +92,8 @@
 
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
       <ul>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#programs">Programs</a></li>
+        <li><a href="about.html">Mission</a></li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="#donate">Donate</a></li>
@@ -104,23 +103,23 @@
 
   <main id="main-content">
 
-    <section class="hero" id="hero" data-reveal-group>
-      <div class="hero__media" style="background-image:url('/images/dreamer-heart-fund.jpg');" role="img" aria-label="The Dreamer Heart Fund"></div>
+    <section class="hero hero--home" id="hero" data-reveal-group>
+      <div class="hero__media" role="img" aria-label="The Dreamer Heart Fund"></div>
       <div class="hero__scrim"></div>
 
       <div class="hero__content">
         <div class="hero__inner">
           <p class="eyebrow eyebrow--gold" data-reveal>The Dreamer Heart Fund</p>
 
-          <h1 class="hero__title" data-reveal>A nonprofit built to protect hope.</h1>
+          <h1 class="hero__title" data-reveal>A nonprofit built to uplift.</h1>
 
           <p class="hero__lede" data-reveal>
-            We support families, young dreamers, and community partners through direct aid,
-            education access, and long-term programs designed to create real stability.
+            We support artists, young dreamers, and community partners through direct aid, resource sharing, representation,
+            education access, and long-term programs designed advocate and support creatives going through a hard time.
           </p>
 
           <div class="hero__actions" data-reveal>
-            <a href="#mission" class="btn btn--gold">Learn More</a>
+            <a href="about.html" class="btn btn--gold">Learn More</a>
             <a href="#donate" class="btn btn--blue-outline">Support the Fund</a>
           </div>
         </div>
@@ -130,15 +129,15 @@
     <section class="stats" aria-label="Our impact so far">
       <div class="stats__inner">
         <div class="stat" data-reveal>
-          <div class="stat__value">120+</div>
+          <div class="stat__value">3+</div>
           <div class="stat__label stat__label--gold">Families supported</div>
         </div>
         <div class="stat" data-reveal>
-          <div class="stat__value">$250K</div>
+          <div class="stat__value">$20k</div>
           <div class="stat__label stat__label--blue">Community impact</div>
         </div>
         <div class="stat" data-reveal>
-          <div class="stat__value">18</div>
+          <div class="stat__value">3</div>
           <div class="stat__label stat__label--gold">Partner organizations</div>
         </div>
       </div>
@@ -263,72 +262,64 @@
       </div>
     </section>
 
-    <!-- ============ FUTURE MODULE: VIDEO (scaffold, hidden until content ships) ============ -->
+    <!-- ============ FUTURE VIDEO SECTION  ============ -->
     <section class="module-stub" id="video" hidden>
       <!--
         Reserved for a "Stories" / video module (e.g. embedded testimonials,
-        program recaps). Wire a privacy-respecting embed (youtube-nocookie.com
+        program recaps). I must remind myself to add a privacy-respecting embed (youtube-nocookie.com
         or self-hosted <video>) here; CSP frame-src already allows the two
-        common providers. Keep autoplay off and always provide captions.
+        common providers. Keep autoplay off and always provide captions. Need to start a youtube ughhhh
       -->
     </section>
 
-    <!-- ============ FUTURE MODULE: SHOP (scaffold, hidden until content ships) ============ -->
-    <section class="module-stub" id="shop" hidden>
-      <!--
-        Reserved for a merchandise / cause-marketing shop. Render products
-        server-side or via a signed API call — never trust client-side price
-        data. Route checkout through a PCI-compliant processor (Stripe
-        Checkout, Shopify, etc.); this page never handles card numbers.
-      -->
-    </section>
-
-    <!-- ============ FUTURE MODULE: AUCTIONS (scaffold, hidden until content ships) ============ -->
+    <!-- ============ FUTURE AUCTIONS SECTION MAYBE ============ -->
     <section class="module-stub" id="auctions" hidden>
       <!--
-        Reserved for benefit auctions. Bidding must be validated server-side
-        (authoritative current-bid state, rate limiting, auth) — client JS
-        should only ever reflect state, not decide winners.
-      -->
+        Reserved for benefit auctions. May connect my 32 auctions account. W0uld like live biding but who knows -->
     </section>
 
-    <!-- ============ DONATE ============ -->
     <section class="donate" id="donate">
       <div class="section-inner donate__grid">
         <div data-reveal>
           <p class="eyebrow eyebrow--gold">Give</p>
           <h2 class="section-title section-title--tight">Every gift keeps a dream steady.</h2>
           <p class="body-text">
-            Donations fund emergency grants, scholarships, and the community programs above.
+            Donations fund emergency grants, resource sharing, exhibitions and the community programs above.
             One-time and recurring gifts are both welcome.
+            <br>
           </p>
         </div>
 
         <div class="donate__panel" data-reveal>
-          <!--
-            Scaffold only: this form currently has no backend. Before launch,
-            replace the action below with a PCI-compliant hosted checkout
-            (Stripe Checkout / Payment Links, PayPal Giving, or similar) so
-            card data never touches this server. Do not add a server-side
-            handler that stores raw card numbers.
-          -->
-          <form class="donate-form" action="#" method="post" novalidate>
+          <div class="donate-form">
             <div class="donate-form__amounts" role="group" aria-label="Donation amount">
-              <button type="button" class="amount-btn" data-amount="25">$25</button>
-              <button type="button" class="amount-btn" data-amount="50">$50</button>
-              <button type="button" class="amount-btn" data-amount="100">$100</button>
-              <button type="button" class="amount-btn" data-amount="250">$250</button>
+              <button type="button" class="amount-btn" data-amount="25" aria-pressed="false">$25</button>
+              <button type="button" class="amount-btn" data-amount="50" aria-pressed="false">$50</button>
+              <button type="button" class="amount-btn" data-amount="100" aria-pressed="false">$100</button>
+              <button type="button" class="amount-btn" data-amount="250" aria-pressed="false">$250</button>
             </div>
 
             <label class="field-label" for="donate-amount">Custom amount (USD)</label>
-            <input class="field-input" id="donate-amount" name="amount" type="number" min="1" step="1" inputmode="numeric" autocomplete="off" placeholder="75" />
+            <input
+              class="field-input"
+              id="donate-amount"
+              name="amount"
+              type="text"
+              inputmode="decimal"
+              autocomplete="off"
+              placeholder="75"
+              aria-describedby="donate-form-note"
+            />
 
-            <label class="field-label" for="donate-email">Email</label>
-            <input class="field-input" id="donate-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            <div id="paypal-button-container" class="paypal-button-container"></div>
 
-            <button type="submit" class="btn btn--blue donate-form__submit">Donate securely</button>
-            <p class="donate-form__note">You’ll be redirected to a secure, PCI-compliant checkout. The Dreamer Heart Fund never stores your card details.</p>
-          </form>
+            <p class="donate-form__note" id="donate-form-note" aria-live="polite">Choose or enter an amount above to enable payment. You'll confirm the donation on PayPal — The Dreamer Heart Fund never stores your card details.</p>
+
+            <p class="donate-form__fallback">
+              Buttons not loading?
+              <a href="https://www.paypal.biz/thedreamerheartfund" rel="noopener">Donate on PayPal directly</a>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -343,8 +334,8 @@
 
       <nav aria-label="Footer">
         <ul class="site-footer__list">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#donate">Donate</a></li>
@@ -352,12 +343,14 @@
       </nav>
 
       <div class="site-footer__legal">
-        <p>&copy; <span id="footer-year">2026</span> The Dreamer Heart Fund. A registered nonprofit organization.</p>
+        <p>&copy; <span id="footer-year">2026</span> The Dreamer Heart Fund.</p>
         <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Use</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA8m6np1R4EyHcxObkY6hLGJdmeCMpY4fYKsWWD1G0BNYx0Xn50q8cy3hmt63-K00gHcWDGMQ-kjcnxLY&currency=USD&intent=capture" defer></script>
+  <script src="donate.js" defer></script>
 </body>
 </html>

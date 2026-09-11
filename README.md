@@ -1,5 +1,5 @@
 # the_dreamer_heart_fund
-The Dreamer Heart Fund is a non-profit, community-driven crowdfunding platform designed to elevate underrepresented talent, raise global awareness, and provide direct financial mutual aid to low-income artists and creators in financial need.Unlike traditional crowdfunding sites, our platform prioritizes storytelling, equity, and
+The Dreamer Heart Fund is a non-profit, community-driven crowdfunding platform designed to elevate underrepresented talent, raise global awareness, and provide direct financial mutual aid to low-income artists and creators in financial need.Unlike traditional crowdfunding sites, our platform prioritizes storytelling, equity, and equity.
 
 🌟 Key Features:
 

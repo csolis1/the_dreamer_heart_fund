@@ -3,14 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!--
-    CSP note: trimmed to just what this page actually uses — no PayPal,
-    no video embeds, no external forms yet, since orders are handled
-    manually by email for now. Widen this later only as each integration
-    (Shopify, a payment link, an embedded order form, etc.) is actually
-    added — don't pre-open allowances you're not using yet.
-  -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
                  img-src 'self' data:;
@@ -58,14 +50,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="shop.css" />
-
-  <!--
-    Structured data intentionally kept to a plain WebPage for now. Add
-    Product/Offer schema (with real prices, availability, and SKUs) once
-    the catalog and order flow are final — publishing placeholder product
-    data as structured data can get flagged in Search Console.
-  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,8 +77,8 @@
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="primary-nav__list">
-          <li><a href="index.html#mission">Mission</a></li>
-          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="index.html#events">Events</a></li>
           <li><a href="shop.html" aria-current="page">Shop</a></li>
           <li><a href="index.html#donate" class="primary-nav__cta">Donate</a></li>
@@ -108,8 +92,8 @@
 
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
       <ul>
-        <li><a href="index.html#mission">Mission</a></li>
-        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="about.html">Mission</a></li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="index.html#events">Events</a></li>
         <li><a href="shop.html" aria-current="page">Shop</a></li>
         <li><a href="index.html#donate">Donate</a></li>
@@ -152,13 +136,6 @@
           <h2 class="section-title">Prints for sale</h2>
         </div>
 
-        <!--
-          Sample catalog below — replace image src/alt, titles, details, and
-          prices with your real prints. Each button's data-* attributes feed
-          the pop-up; there's nothing else to wire up in shop.js when you
-          add or remove a card. data-order-href points at the order form
-          you'll build — update the query param or swap it for the real URL.
-        -->
         <ul class="shop-grid" id="shop-grid-list">
           <li class="product-card">
             <button type="button" class="product-card__trigger"
@@ -266,7 +243,6 @@
     </section>
   </main>
 
-  <!-- Product pop-up. Populated by shop.js from the clicked card's data-* attributes. -->
   <div class="product-modal" id="product-modal" aria-hidden="true">
     <div class="product-modal__backdrop" id="product-modal-backdrop"></div>
     <button type="button" class="product-modal__close" id="product-modal-close" aria-label="Close">&times;</button>
@@ -298,8 +274,8 @@
 
       <nav aria-label="Footer">
         <ul class="site-footer__list">
-          <li><a href="index.html#mission">Mission</a></li>
-          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="index.html#events">Events</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="index.html#donate">Donate</a></li>
@@ -314,5 +290,6 @@
   </footer>
 
   <script src="main.js" defer></script>
+  <script src="shop.js" defer></script>
 </body>
 </html>
