@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    CSP note: trimmed to just what this page actually uses — no PayPal,
+    no video embeds, no external forms yet, since orders are handled
+    manually by email for now. Widen this later only as each integration
+    (Shopify, a payment link, an embedded order form, etc.) is actually
+    added — don't pre-open allowances you're not using yet.
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' data:;
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                 font-src 'self' https://fonts.gstatic.com;
+                 script-src 'self';
+                 connect-src 'self';
+                 frame-src 'self';
+                 object-src 'none';
+                 base-uri 'self';
+                 form-action 'self';
+                 upgrade-insecure-requests;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#faf8f3" />
+
+  <title>Shop Prints | The Dreamer Heart Fund</title>
+  <meta name="description" content="Original prints from Carlos Solis's surrealist series, sold directly to support The Dreamer Heart Fund. Small-batch, hand-processed orders — no card checkout required." />
+  <meta name="keywords" content="Dreamer Heart Fund shop, Carlos Solis prints, surrealist art prints, buy art prints, nonprofit art shop" />
+  <meta name="author" content="The Dreamer Heart Fund" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dreamerheartfund.org/shop.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Dreamer Heart Fund" />
+  <meta property="og:title" content="Shop Prints | The Dreamer Heart Fund" />
+  <meta property="og:description" content="Original prints from Carlos Solis's surrealist series. Every order supports the fund directly — orders are confirmed personally by email." />
+  <meta property="og:image" content="https://www.dreamerheartfund.org/images/shop/guajiro-dreams.jpg" />
+  <meta property="og:url" content="https://www.dreamerheartfund.org/shop.html" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shop Prints | The Dreamer Heart Fund" />
+  <meta name="twitter:description" content="Original surrealist prints by Carlos Solis. Every order supports The Dreamer Heart Fund." />
+  <meta name="twitter:image" content="https://www.dreamerheartfund.org/images/shop/guajiro-dreams.jpg" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="shop.css" />
+
+  <!--
+    Structured data intentionally kept to a plain WebPage for now. Add
+    Product/Offer schema (with real prices, availability, and SKUs) once
+    the catalog and order flow are final — publishing placeholder product
+    data as structured data can get flagged in Search Console.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Shop Prints | The Dreamer Heart Fund",
+    "url": "https://www.dreamerheartfund.org/shop.html",
+    "isPartOf": {
+      "@type": "NGO",
+      "name": "The Dreamer Heart Fund",
+      "url": "https://www.dreamerheartfund.org/"
+    },
+    "description": "Original prints from Carlos Solis's surrealist series, sold to support The Dreamer Heart Fund."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="images/logo.png" alt="The Dreamer Heart Fund logo">
+        <span class="brand__name">The Dreamer Heart Fund</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="index.html#donate" class="primary-nav__cta">Donate</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+      <ul>
+        <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="shop.html" aria-current="page">Shop</a></li>
+        <li><a href="index.html#donate">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="shop-hero" id="hero" data-reveal-group>
+      <div class="shop-hero__inner">
+        <p class="eyebrow eyebrow--gold" data-reveal>Shop</p>
+        <h1 class="shop-hero__title" data-reveal>Original prints, made by hand.</h1>
+        <p class="shop-hero__lede" data-reveal>
+          Each print comes from Carlos Solis's surrealist series. Every order supports
+          The Dreamer Heart Fund directly.
+        </p>
+        <a href="#shop-grid" class="btn btn--gold shop-hero__cta" data-reveal>Browse the Collection</a>
+      </div>
+      <svg class="shop-hero__mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false" data-reveal>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="var(--dhf-gold)" stroke-width="1.5" />
+        <circle cx="100" cy="100" r="46" fill="none" stroke="var(--dhf-blue)" stroke-width="1.5" />
+      </svg>
+    </section>
+
+    <section class="order-note" aria-label="How ordering works">
+      <div class="section-inner order-note__inner" data-reveal>
+        <p class="order-note__lead">We&rsquo;re a small studio &mdash; orders are handled personally via email.</p>
+        <p class="order-note__text">
+          All orders are handled manually. After you submit the form, I&rsquo;ll email you with the total
+          and payment instructions (Zelle/Venmo). Your order is confirmed once payment is received.
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-grid-section" id="shop-grid">
+      <div class="section-inner">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow eyebrow--blue">Available Now</p>
+          <h2 class="section-title">Prints for sale</h2>
+        </div>
+
+        <!--
+          Sample catalog below — replace image src/alt, titles, details, and
+          prices with your real prints. Each button's data-* attributes feed
+          the pop-up; there's nothing else to wire up in shop.js when you
+          add or remove a card. data-order-href points at the order form
+          you'll build — update the query param or swap it for the real URL.
+        -->
+        <ul class="shop-grid" id="shop-grid-list">
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="Guajiro Dreams"
+              data-details="Giclée print on archival paper &middot; 11 &times; 14 in &middot; Edition of 50"
+              data-price="$45"
+              data-image="images/shop/guajiro-dreams.jpg"
+              data-image-alt="Surrealist portrait print titled Guajiro Dreams"
+              data-order-href="order.html?item=guajiro-dreams">
+              <span class="product-card__media product-card__media--portrait">
+                <img src="images/shop/guajiro-dreams.jpg" alt="Surrealist portrait print titled Guajiro Dreams" loading="lazy" width="800" height="1000" />
+              </span>
+              <span class="product-card__title">Guajiro Dreams</span>
+              <span class="product-card__details">Giclée print &middot; 11 &times; 14 in</span>
+              <span class="product-card__price">$45</span>
+            </button>
+          </li>
+
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="Amazon Reverie"
+              data-details="Giclée print on archival paper &middot; 16 &times; 12 in &middot; Edition of 50"
+              data-price="$55"
+              data-image="images/shop/amazon-reverie.jpg"
+              data-image-alt="Surrealist landscape print titled Amazon Reverie"
+              data-order-href="order.html?item=amazon-reverie">
+              <span class="product-card__media product-card__media--landscape">
+                <img src="images/shop/amazon-reverie.jpg" alt="Surrealist landscape print titled Amazon Reverie" loading="lazy" width="1000" height="750" />
+              </span>
+              <span class="product-card__title">Amazon Reverie</span>
+              <span class="product-card__details">Giclée print &middot; 16 &times; 12 in</span>
+              <span class="product-card__price">$55</span>
+            </button>
+          </li>
+
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="Flora Mystica"
+              data-details="Giclée print on archival paper &middot; 12 &times; 18 in &middot; Edition of 30"
+              data-price="$65"
+              data-image="images/shop/flora-mystica.jpg"
+              data-image-alt="Tall surrealist botanical print titled Flora Mystica"
+              data-order-href="order.html?item=flora-mystica">
+              <span class="product-card__media product-card__media--tall">
+                <img src="images/shop/flora-mystica.jpg" alt="Tall surrealist botanical print titled Flora Mystica" loading="lazy" width="800" height="1200" />
+              </span>
+              <span class="product-card__title">Flora Mystica</span>
+              <span class="product-card__details">Giclée print &middot; 12 &times; 18 in</span>
+              <span class="product-card__price">$65</span>
+            </button>
+          </li>
+
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="Spiral of Memory"
+              data-details="Giclée print on archival paper &middot; 12 &times; 12 in &middot; Edition of 50"
+              data-price="$40"
+              data-image="images/shop/spiral-of-memory.jpg"
+              data-image-alt="Square surrealist print titled Spiral of Memory"
+              data-order-href="order.html?item=spiral-of-memory">
+              <span class="product-card__media product-card__media--square">
+                <img src="images/shop/spiral-of-memory.jpg" alt="Square surrealist print titled Spiral of Memory" loading="lazy" width="900" height="900" />
+              </span>
+              <span class="product-card__title">Spiral of Memory</span>
+              <span class="product-card__details">Giclée print &middot; 12 &times; 12 in</span>
+              <span class="product-card__price">$40</span>
+            </button>
+          </li>
+
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="Between Two Rivers"
+              data-details="Giclée print on archival paper &middot; 18 &times; 12 in &middot; Edition of 30"
+              data-price="$70"
+              data-image="images/shop/between-two-rivers.jpg"
+              data-image-alt="Wide surrealist landscape print titled Between Two Rivers"
+              data-order-href="order.html?item=between-two-rivers">
+              <span class="product-card__media product-card__media--wide">
+                <img src="images/shop/between-two-rivers.jpg" alt="Wide surrealist landscape print titled Between Two Rivers" loading="lazy" width="1200" height="800" />
+              </span>
+              <span class="product-card__title">Between Two Rivers</span>
+              <span class="product-card__details">Giclée print &middot; 18 &times; 12 in</span>
+              <span class="product-card__price">$70</span>
+            </button>
+          </li>
+
+          <li class="product-card">
+            <button type="button" class="product-card__trigger"
+              data-title="The Dreamer No. 3"
+              data-details="Giclée print on archival paper &middot; 11 &times; 17 in &middot; Edition of 25"
+              data-price="$85"
+              data-image="images/shop/the-dreamer-no-3.jpg"
+              data-image-alt="Surrealist portrait print titled The Dreamer No. 3"
+              data-order-href="order.html?item=the-dreamer-no-3">
+              <span class="product-card__media product-card__media--tall">
+                <img src="images/shop/the-dreamer-no-3.jpg" alt="Surrealist portrait print titled The Dreamer No. 3" loading="lazy" width="800" height="1230" />
+              </span>
+              <span class="product-card__title">The Dreamer No. 3</span>
+              <span class="product-card__details">Giclée print &middot; 11 &times; 17 in</span>
+              <span class="product-card__price">$85</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product pop-up. Populated by shop.js from the clicked card's data-* attributes. -->
+  <div class="product-modal" id="product-modal" aria-hidden="true">
+    <div class="product-modal__backdrop" id="product-modal-backdrop"></div>
+    <button type="button" class="product-modal__close" id="product-modal-close" aria-label="Close">&times;</button>
+    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" id="product-modal-dialog">
+      <div class="product-modal__media">
+        <img id="product-modal-image" src="" alt="" />
+      </div>
+
+      <div class="product-modal__body">
+        <div class="product-modal__info">
+          <h3 class="product-modal__title" id="product-modal-title"></h3>
+          <p class="product-modal__details" id="product-modal-details"></p>
+        </div>
+        <div class="product-modal__actions">
+          <p class="product-modal__price" id="product-modal-price"></p>
+          <a href="#" class="btn btn--gold product-modal__order" id="product-modal-order">Order This Print</a>
+        </div>
+      </div>
+      <p class="product-modal__note">Orders are confirmed personally by email &mdash; see note above for how it works.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="section-inner site-footer__grid">
+      <div>
+        <span class="brand__name brand__name--footer">Dreamer Heart Fund</span>
+        <p class="site-footer__text">A nonprofit built to protect hope, one family at a time.</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <ul class="site-footer__list">
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="index.html#donate">Donate</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__legal">
+        <p>&copy; <span id="footer-year">2026</span> The Dreamer Heart Fund. A registered nonprofit organization.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
