@@ -74,8 +74,8 @@
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="primary-nav__list">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#donate" class="primary-nav__cta">Donate</a></li>
@@ -89,8 +89,8 @@
 
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
       <ul>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#programs">Programs</a></li>
+        <li><a href="about.html">Mission</a></li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="#donate">Donate</a></li>
@@ -143,6 +143,7 @@ Beyond his studio practice, Carlos is a curator and community builder. He is the
 <br>
 <br>
 The Dreamer Heart Fund grows out of this same commitment: from one artist’s health crisis to a collective promise that the creative community will care for its own in moments of urgent need. 
+          </p>
         </div>
 
         <div class="mission__image" data-reveal>
@@ -158,40 +159,54 @@ The Dreamer Heart Fund grows out of this same commitment: from one artist’s he
           <h2 class="section-title"> Carlos Solis' Journey</h2>
         </div>
 
-        <div class="carousel">
-          <button class="carousel__nav carousel__nav--prev" id="carousel-prev" aria-label="Scroll to previous events" type="button">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="carousel carousel--gallery">
+          <button class="carousel__nav carousel__nav--prev carousel__nav--gallery" id="carousel-prev" aria-label="Scroll to previous photo" type="button">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
 
-          <ul class="carousel__track" id="carousel-track">
-            <li class="carousel__item" data-reveal>
-              <div class="carousel__media">
-                <img src="images/fundraiser.png" alt="Guests at the Inaugural Dreamer Exhibition gallery opening" loading="lazy" width="600" height="400" />
-                <span class="carousel__tag carousel__tag--blue">Aug 2020</span>
-              </div>
-              <h3 class="carousel__title">Inaugural Dreamer Exhibition</h3>
-              <p class="carousel__text">A gallery opening that introduced “The Dreamer” series and formally launched the fund, featuring live music and a short talk by the artist.</p>
+          <ul class="carousel__track carousel__track--gallery" id="carousel-track">
+            <li class="carousel__item carousel__item--gallery" data-reveal>
+              <figure class="gallery-frame">
+                <div class="gallery-frame__media">
+                  <img src="images/fundraiser.png" alt="Guests at the Inaugural Dreamer Exhibition gallery opening" loading="lazy" width="1200" height="800" />
+                </div>
+                <figcaption class="gallery-frame__caption">
+                  <span class="gallery-frame__tag gallery-frame__tag--gold">Aug 2020</span>
+                  <h3 class="gallery-frame__title">Inaugural Dreamer Exhibition</h3>
+                  <p class="gallery-frame__text">The gallery opening that introduced &ldquo;The Dreamer&rdquo; series and launched the fund.</p>
+                </figcaption>
+              </figure>
             </li>
-            <li class="carousel__item" data-reveal>
-              <div class="carousel__media">
-                <img src="images/past/healing-workshop.jpg" alt="Families and artists at the Community Healing Workshop" loading="lazy" width="600" height="400" />
-                <span class="carousel__tag carousel__tag--gold">Jan 2026</span>
-              </div>
-              <h3 class="carousel__title">Community Healing Workshop</h3>
-              <p class="carousel__text">A small group of families and artists gathered for a guided art session focused on healing, memory, and resilience after crisis.</p>
+
+            <li class="carousel__item carousel__item--gallery" data-reveal>
+              <figure class="gallery-frame">
+                <div class="gallery-frame__media">
+                  <img src="images/past/healing-workshop.jpg" alt="Families and artists at the Community Healing Workshop" loading="lazy" width="1200" height="800" />
+                </div>
+                <figcaption class="gallery-frame__caption">
+                  <span class="gallery-frame__tag gallery-frame__tag--blue">Jan 2026</span>
+                  <h3 class="gallery-frame__title">Community Healing Workshop</h3>
+                  <p class="gallery-frame__text">A guided art session focused on healing, memory, and resilience after crisis.</p>
+                </figcaption>
+              </figure>
             </li>
-            <li class="carousel__item" data-reveal>
-              <div class="carousel__media">
-                <img src="images/past/benefit-concert.jpg" alt="Local musicians performing at the Benefit Concert for the Fund" loading="lazy" width="600" height="400" />
-                <span class="carousel__tag carousel__tag--blue">Mar 2026</span>
-              </div>
-              <h3 class="carousel__title">Benefit Concert for the Fund</h3>
-              <p class="carousel__text">Local musicians performed an evening of original pieces, with all proceeds supporting emergency grants for artists in need.</p>
+
+            <li class="carousel__item carousel__item--gallery" data-reveal>
+              <figure class="gallery-frame">
+                <div class="gallery-frame__media">
+                  <img src="images/past/benefit-concert.jpg" alt="Local musicians performing at the Benefit Concert for the Fund" loading="lazy" width="1200" height="800" />
+                </div>
+                <figcaption class="gallery-frame__caption">
+                  <span class="gallery-frame__tag gallery-frame__tag--gold">Mar 2026</span>
+                  <h3 class="gallery-frame__title">Benefit Concert for the Fund</h3>
+                  <p class="gallery-frame__text">An evening of original pieces, proceeds supporting emergency grants for artists.</p>
+                </figcaption>
+              </figure>
             </li>
           </ul>
 
-          <button class="carousel__nav carousel__nav--next" id="carousel-next" aria-label="Scroll to next events" type="button">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <button class="carousel__nav carousel__nav--next carousel__nav--gallery" id="carousel-next" aria-label="Scroll to next photo" type="button">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
       </div>
@@ -201,14 +216,13 @@ The Dreamer Heart Fund grows out of this same commitment: from one artist’s he
     <section class="module-stub" id="shop" hidden></section>
     <section class="module-stub" id="auctions" hidden></section>
 
-    <!-- ============ DONATE ============ -->
     <section class="donate" id="donate">
       <div class="section-inner donate__grid">
         <div data-reveal>
           <p class="eyebrow eyebrow--gold">Give</p>
           <h2 class="section-title section-title--tight">Every gift keeps a dream steady.</h2>
           <p class="body-text">
-            Donations fund emergency grants, scholarships, and the community programs above.
+            Donations fund emergency grants, resource sharing, exhibitions and the community programs above.
             One-time and recurring gifts are both welcome.
             <br>
           </p>
@@ -258,8 +272,8 @@ The Dreamer Heart Fund grows out of this same commitment: from one artist’s he
 
       <nav aria-label="Footer">
         <ul class="site-footer__list">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#programs">Programs</a></li>
+          <li><a href="about.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#donate">Donate</a></li>
