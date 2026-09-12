@@ -1357,10 +1357,9 @@ body.product-modal-open {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-/* The label bar — fused to the image, no gap, no card chrome */
 .gallery-frame__caption {
   background: var(--dhf-black-soft, #161616);
   padding: 1.1rem 1.75rem 1.35rem;
