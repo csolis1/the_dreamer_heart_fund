@@ -1,11 +1,8 @@
-/*
-  shop.js
-  Powers the product pop-up on shop.html. No product data lives here —
-  it's all read from each card's data-* attributes in the HTML, so adding
-  or editing a print only ever means editing shop.html.
-*/
 (function () {
   "use strict";
+  var ORDER_FORM_BASE =
+    "https://docs.google.com/forms/d/e/1FAIpQLSc_zSNk0W6VYLay9R_7cM30Isjs-5scb00EQOhBfQkiLrJ5Qw/viewform?usp=pp_url&entry.1000027=%22We+Are+One%22+-+24%22+x+18%22";
+  var PRINT_ENTRY_ID = "entry.1000027";
 
   var modal = document.getElementById("product-modal");
   var backdrop = document.getElementById("product-modal-backdrop");
@@ -21,6 +18,19 @@
 
   var lastFocused = null;
 
+  function buildOrderHref(data) {
+    if (data.printLabel) {
+      return (
+        ORDER_FORM_BASE +
+        "?usp=pp_url&" +
+        PRINT_ENTRY_ID +
+        "=" +
+        encodeURIComponent(data.printLabel)
+      );
+    }
+    return data.orderHref || ORDER_FORM_BASE;
+  }
+
   function openModal(trigger) {
     var data = trigger.dataset;
 
@@ -29,7 +39,7 @@
     modalTitle.textContent = data.title || "";
     modalDetails.textContent = data.details || "";
     modalPrice.textContent = data.price || "";
-    modalOrder.setAttribute("href", data.orderHref || "order.html");
+    modalOrder.setAttribute("href", buildOrderHref(data));
 
     lastFocused = trigger;
     modal.setAttribute("aria-hidden", "false");
@@ -54,7 +64,6 @@
       return;
     }
 
-    // Simple focus trap: keep Tab cycling within the dialog.
     if (event.key === "Tab") {
       var focusable = dialog.querySelectorAll(
         'button, a[href], [tabindex]:not([tabindex="-1"])'

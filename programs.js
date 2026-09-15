@@ -1,7 +1,5 @@
 (function () {
   "use strict";
-
-  // ---------- Session picker ----------
   var picker = document.getElementById("session-picker");
   var sessionInput = document.getElementById("signup-session");
 
@@ -17,7 +15,6 @@
     });
   }
 
-  // -Book Now / Interest Form buttons -//
   var CALENDLY_URL = "https://calendly.com/dreamerheartfund/surrealism-art-class"; // TODO: your real Calendly event URL
   var GOOGLE_FORM_BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLScc5WC2Orc7DLaIpyK6JP1rb64L7h4pwOeZRxQ7YwlVLJ-chQ/viewform";
 
@@ -41,7 +38,6 @@
     };
   }
 
-  // Require at least a name //
   function validate(values) {
     if (!values.name) {
       if (status) {
